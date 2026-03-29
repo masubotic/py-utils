@@ -1,0 +1,6 @@
+[project]
+name = "chromedriver-utils"
+version = "0.1.0"
+description = "Download ChromeDriver matching a given Chrome version"
+requires-python = ">=3.12"
+dependencies = []

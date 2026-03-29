@@ -1,0 +1,12 @@
+[project]
+name = "utils"
+version = "0.1.0"
+description = "Collection of standalone utility scripts"
+requires-python = ">=3.12"
+dependencies = []
+
+[tool.uv.workspace]
+members = [
+    "merge_pptx",
+    "chromedriver",
+]
