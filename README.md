@@ -45,3 +45,22 @@ uv run --package chromedriver-utils chromedriver/download_chromedriver.py <chrom
 | `[output_dir]` | Folder docelowy, domyślnie `.` |
 
 Pliki binarne ChromeDrivera trafiają bezpośrednio do `output_dir`.
+
+---
+
+## chromedriver_pypac
+
+To samo co `chromedriver`, z jedną różnicą: wszystkie żądania HTTP idą przez `pypac.PACSession`, więc respektowany jest systemowy/firmowy plik PAC (Proxy Auto-Config). Gdy PAC nie zostanie znaleziony, pypac wraca do standardowej obsługi proxy z `requests` (`HTTP_PROXY` / `HTTPS_PROXY`).
+
+**Zależności:** `pypac`
+
+```bash
+uv run --package chromedriver-pypac-utils chromedriver_pypac/download_chromedriver.py <chrome_version> [output_dir]
+```
+
+| Argument | Opis |
+|---|---|
+| `<chrome_version>` | Wersja Chrome, np. `136.0.7103.93` |
+| `[output_dir]` | Folder docelowy, domyślnie `.` |
+
+Pliki binarne ChromeDrivera trafiają bezpośrednio do `output_dir`.
