@@ -73,3 +73,19 @@ uv run chromedriver/download_chromedriver.py 120.0.6099.109 chromedriver/chromed
 ```
 
 Downloaded binaries land in `chromedriver/chromedriver-*/` which is gitignored.
+
+---
+
+### `chromedriver_pypac/download_chromedriver.py`
+
+Same as `chromedriver/download_chromedriver.py`, but all HTTP requests go through a `pypac.PACSession` so an enterprise/system PAC file (Proxy Auto-Config) is honoured. When no PAC file is discovered, pypac falls back to requests' normal proxy handling (`HTTP_PROXY` / `HTTPS_PROXY`). Same CLI and behaviour otherwise.
+
+**Dependency:** `pypac`
+
+```bash
+uv run chromedriver_pypac/download_chromedriver.py <chrome_version> [output_dir]
+# Example:
+uv run chromedriver_pypac/download_chromedriver.py 120.0.6099.109 chromedriver_pypac/chromedriver-win64
+```
+
+Downloaded binaries land in `chromedriver_pypac/chromedriver-*/` which is gitignored.

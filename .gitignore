@@ -11,6 +11,7 @@ wheels/
 
 # Downloaded ChromeDriver binaries
 chromedriver/chromedriver-*/
+chromedriver_pypac/chromedriver-*/
 
 # PPTX files (script input/output)
 *.pptx

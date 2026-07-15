@@ -9,4 +9,5 @@ dependencies = []
 members = [
     "merge_pptx",
     "chromedriver",
+    "chromedriver_pypac",
 ]

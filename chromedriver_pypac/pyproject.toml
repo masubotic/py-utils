@@ -1,0 +1,8 @@
+[project]
+name = "chromedriver-pypac-utils"
+version = "0.1.0"
+description = "Download ChromeDriver matching a given Chrome version, honouring a PAC proxy (pypac)"
+requires-python = ">=3.12"
+dependencies = [
+    "pypac>=0.16",
+]
